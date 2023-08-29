@@ -1,7 +1,6 @@
-#Matka Simulation
+Matka Simulation
 
-
-##Description of the Game
+Description of the Game
 
 Welcome to the Matka Simulation Project! This simulation brings to life the exciting world of the Kalyan version of the popular Indian betting game called Matka. In this game, participants engage in random bets on a combination of numbers to cash.  This basic simulation outputs results presenting data on wins, losses, win rate, and return per unit amount bet.
 
@@ -15,7 +14,7 @@ Algorithm of the Game
 
     Placing Bets on Jodi: In this simulation, the focus is on betting on the jodi. Participants can place bets on different jodi combinations. The odds of betting on a jodi are 90:1, meaning if you win, you'll receive 90 times your bet amount. Please note that there are multiple bets available in the full Matka game, but our simulation concentrates on the jodi bets.
 
-##File Structure
+File Structure
 
 This project consists of two main files:
 
@@ -23,7 +22,7 @@ This project consists of two main files:
 
     simulation.py: In this file, the Matka simulation is run using the functions defined in matka.py. One can run n number of simulations by changing the input of the the 'kalyan.simulate(n)' method.
 
-##Libraries and Technologies Used
+Libraries and Technologies Used
 
 The Matka Simulation  is built using Python 3 and leverages the following libraries:
 
@@ -32,7 +31,7 @@ The Matka Simulation  is built using Python 3 and leverages the following librar
     random: The random library is used to generate random numbers, essential for creating open and close numbers, and simulating the betting outcomes.
 
 
-##Disclaimer: Educational Purposes Only
+Disclaimer: Educational Purposes Only
 
 This Matka Simulation Project is designed and developed solely for educational and learning purposes. The project's intent is to demonstrate the mechanics of the Matka game through a virtual simulation, offering insights into its rules and betting concepts. It is not intended for any form of gambling or real-world betting.
 
