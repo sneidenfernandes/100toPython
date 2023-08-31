@@ -10,7 +10,7 @@ Drawing Numbers (Patti): A set of three numbers is drawn from a list of cards. T
 
 Generating Open and Close Numbers: From each set of three numbers drawn, the digits are added together to create an open number and a close number. These numbers correspond to the morning and evening sessions of the draw, respectively. For example, if the patti drawn in the morning session is 5, 8, and 3, the open number would be 5+8+3 = 16 and the close number would be the last digit of the sum, i.e., 6.
 
-##Creating Jodi: The open and close digits are combined to form a "jodi," which is a two-digit number. For instance, if the open number is 16 and the close number is 6, the jodi would be 16-6.
+Creating Jodi: The open and close digits are combined to form a "jodi," which is a two-digit number. For instance, if the open number is 16 and the close number is 6, the jodi would be 16-6.
 
 Placing Bets on Jodi: In this simulation, the focus is on betting on the jodi. Participants can place bets on different jodi combinations. The odds of betting on a jodi are 90:1, meaning if you win, you'll receive 90 times your bet amount. Please note that there are multiple bets available in the full Matka game, but our simulation concentrates on the jodi bets.
 
@@ -22,7 +22,7 @@ matka.py: This file contains the core logic and functions for simulating the Mat
 
 simulation.py: In this file, the Matka simulation is run using the functions defined in matka.py. One can run n number of simulations by changing the input of the the 'kalyan.simulate(n)' method.
 
-##Libraries and Technologies Used
+Libraries and Technologies Used
 
 The Matka Simulation  is built using Python 3 and leverages the following libraries:
 
