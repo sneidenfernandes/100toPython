@@ -1,8 +1,7 @@
 import requests
 import time
 from bs4 import BeautifulSoup as bs
-import notify2
-
+from pync import Notifier
 
 def get_btc_price():
     # Specify url
@@ -17,50 +16,30 @@ def get_btc_price():
     # Initiating bs4 to parse through the text
     soup = bs(html,'lxml')
 
+
     # Getting the current price of btc according to coindesk
     btc_price = soup.find(class_='currency-pricestyles__Price-sc-1rux8hj-0 eEpEzP').text
 
     time.sleep(2)
 
-    return btc_price
+    return str(btc_price)
 
 
 def notification():
+    # Create a notification
+    title = "Bitcoin Price"
+    message = get_btc_price()
+    icon_path = '/Users/sneiden/github/100toPython/Bitcoin Notification/btc.png'
 
-    # Specifying icon image path
-    icon_path = 'btc_image.avif'
+    Notifier.notify(
+        title=title,
+        message= f"\n{message}",
+        appIcon=icon_path,  
+        timeout=10,                    
+    )
 
-    # Getting the price of bitcoin using the predefined function 
-    btc_price = get_btc_price()
-
-    # Initiaing the d-bus connection
-    notify2.init('Bitcoin Price')
-
-    # Create Notification Object
-
-    n = notify2.Notification(None, icon=icon_path)
-
-    # Set Urgency Level
-
-    n.set_urgency(notify2.URGENCY_NORMAL)
-
-    # set timeout for a notification
-
-    n.set_timeout(10000)
-
-
-    n.update(btc_price)
-
-
-    # Show notification on desktop
-    n.show()
-
-    # Short Delay between notifications
-    time.sleep(15)
-
-
-
-
+    
+   
 if __name__ == '__main__':
 
     notification()
